@@ -4,9 +4,17 @@
     padding: 0;
 }
 
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 header {
     background-color: #323;
-    height: 100px;
+    height: 75px;
 
     color: white;
 
@@ -16,8 +24,23 @@ header {
 }
 
 main {
-    min-height: 70dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+footer {
+    background-color: #323;
+    height: 50px;
+    color: white;
+    font-size: small;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & p {
+        padding: 0;
+        margin: 0;
+    }
 }
