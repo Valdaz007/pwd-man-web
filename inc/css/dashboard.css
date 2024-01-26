@@ -65,6 +65,7 @@ header {
 
     .radio {
         height: fit-content;
+        transform: translateY(4px);
     }
 
     & p {
@@ -95,11 +96,29 @@ footer {
 }
 
 @media(min-width:426px) {
+    .categories {
+        width: 80%;
+    }
 
+    .pwds {
+        width: 80%;
+    }
 }
 
 @media(min-width:700px) {
     .pwds {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width:1040px) {
+    .pwds {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(min-width:1440px) {
+    .pwds {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
