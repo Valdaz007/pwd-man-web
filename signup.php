@@ -14,7 +14,7 @@
 
     <main>
         <div class="login-form-wrapper">
-            <form class="form-control" action="#" method="post">
+            <form class="form-control" action="./inc/phpmods/signupmod.php" method="POST">
                 <h2 class="mt-2">Sign Up</h2>
                 <input class="form-control mb-2" type = "text" name = "uemail" placeholder="Email" required>
                 <input class="form-control mb-2" type = "text" name = "fname" placeholder="First Name" required>

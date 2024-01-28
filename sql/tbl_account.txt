@@ -19,9 +19,3 @@ ADD CONSTRAINT `FK_user_id` FOREIGN KEY (`acct_uid`)
 REFERENCES `tbl_user`(`user_id`) 
 ON DELETE RESTRICT 
 ON UPDATE RESTRICT;
-
-
-*** INSERT VALUES **************************************
-
-INSERT INTO `tbl_user` (`user_id`, `user_email`, `user_fname`, `user_lname`, `user_name`, `user_pwd`) 
-VALUES (NULL, 'volsavaivictor@gmail.com', NULL, NULL, 'admin', 'admin');

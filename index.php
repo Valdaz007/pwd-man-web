@@ -1,8 +1,3 @@
-<?php
-    include "./inc/phpmods/dbconnect.php";
-    $con = dbconxn();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

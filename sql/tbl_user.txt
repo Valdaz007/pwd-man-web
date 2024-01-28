@@ -14,3 +14,9 @@ CREATE TABLE `pwd_man_db`.`tbl_user` (
 
 ALTER TABLE `tbl_user` 
 ADD `user_role` VARCHAR(10) NOT NULL AFTER `user_pwd`;
+
+
+*** INSERT VALUES **************************************
+
+INSERT INTO `tbl_user` (`user_id`, `user_email`, `user_fname`, `user_lname`, `user_name`, `user_pwd`) 
+VALUES (NULL, 'volsavaivictor@gmail.com', NULL, NULL, 'admin', 'admin');
