@@ -1,0 +1,27 @@
+*** CREATE TABLE **************************************
+
+CREATE TABLE `pwd_man_db`.`tbl_account` (
+    `acct_id` INT(8) NOT NULL AUTO_INCREMENT , 
+    `acct_title` VARCHAR(25) NOT NULL , 
+    `acct_uname` VARCHAR(25) NOT NULL , 
+    `acct_upwd` VARCHAR(25) NOT NULL , 
+    `acct_email` VARCHAR(50) NULL , 
+    `acct_pwd_timestamp` DATETIME NOT NULL ,
+    `acct_type` VARCHAR(25) NOT NULL,
+    PRIMARY KEY (`acct_id`)
+) ENGINE = InnoDB;
+
+
+*** ADD FOREIGN KEY **************************************
+
+ALTER TABLE `tbl_account` 
+ADD CONSTRAINT `FK_user_id` FOREIGN KEY (`acct_uid`) 
+REFERENCES `tbl_user`(`user_id`) 
+ON DELETE RESTRICT 
+ON UPDATE RESTRICT;
+
+
+*** INSERT VALUES **************************************
+
+INSERT INTO `tbl_user` (`user_id`, `user_email`, `user_fname`, `user_lname`, `user_name`, `user_pwd`) 
+VALUES (NULL, 'volsavaivictor@gmail.com', NULL, NULL, 'admin', 'admin');
