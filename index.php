@@ -1,3 +1,8 @@
+<?php
+    include "./inc/db/dbconnect.php";
+    $con = dbconxn();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
