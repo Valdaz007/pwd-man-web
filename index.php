@@ -1,5 +1,5 @@
 <?php
-    include "./inc/db/dbconnect.php";
+    include "./inc/phpmods/dbconnect.php";
     $con = dbconxn();
 ?>
 
