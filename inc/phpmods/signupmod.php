@@ -10,9 +10,10 @@ function signupUser() {
         VALUES ('".$_POST['uemail']."', '".$_POST['fname']."', '".$_POST['lname']."', '".$_POST['uname']."', '".$_POST['upwd']."', 'user');
     ";
 
-    echo $_POST['uemail'].", ".$_POST['fname'].", ".$_POST['lname'].", ".$_POST['uname'].", ".$_POST['upwd'];
-
-    //TODO: CHECK IF USER EMAIL ALREADY EXIST
+    if (emailCheck($conn)) {
+        header("Location: ./../../index.php");
+        exit();
+    }
 
     //?INSERT USER
     if (mysqli_query($conn, $sql)) {
@@ -22,6 +23,20 @@ function signupUser() {
         echo "Error: ".$sql."<br>" . mysqli_error($conn);
     }
     mysqli_close($conn);
+}
+
+function emailCheck($conn) {
+    //TODO: CHECK IF USER EMAIL ALREADY EXIST
+    $sql = "SELECT `user_email` FROM `tbl_user` WHERE `user_email` = '".$_POST['uemail']."';";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        mysqli_close($conn);
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 signupUser();
