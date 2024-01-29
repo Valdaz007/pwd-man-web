@@ -5,7 +5,6 @@ function dbconxn() {
     // Check connection
     if (!$conxn) {
         die("Connection failed: " . mysqli_connect_error());
-        return false;
     }
     return $conxn;
 }

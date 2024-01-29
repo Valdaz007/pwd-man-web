@@ -14,7 +14,7 @@
 
     <main>
         <div class="login-form-wrapper">
-            <form class="form-control" action="#" method="post">
+            <form class="form-control" action="./inc/phpmods/signinmod.php" method="POST">
                 <h2 class="mt-2">Login</h2>
                 <input class="form-control mb-2" type = "text" name = "uname" placeholder="Username" required>
                 <input class="form-control mb-2" type = "password" name = "upwd" placeholder="Password" required>

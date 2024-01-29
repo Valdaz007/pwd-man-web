@@ -2,17 +2,8 @@
 
 include "./dbconnect.php";
 
-// $fname = $_POST['fname'];
-// $lname = $_POST['lname'];
-// $uemail = $_POST['uemail'];
-// $uname = $_POST['uname'];
-// $upwd = $_POST['upwd'];
-
 function signupUser() {
     $conn = dbconxn();
-    if(!$conn){
-        echo "DB Connection Failed!";
-    }
 
     $sql = "
         INSERT INTO `tbl_user` (`user_email`, `user_fname`, `user_lname`, `user_name`, `user_pwd`, `user_role`) 
