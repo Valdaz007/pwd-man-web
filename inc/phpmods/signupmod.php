@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "./dbconnect.php";
 
 function signupUser() {
@@ -11,13 +11,17 @@ function signupUser() {
     ";
 
     if (emailCheck($conn)) {
-        header("Location: ./../../index.php");
+        $_SESSION['status'] = "Email Already Exits!";
+        header("Location: ./../../signup.php");
         exit();
     }
 
     //?INSERT USER
     if (mysqli_query($conn, $sql)) {
-        echo "New Record Added!";
+        $_SESSION['status'] = "New Record Added!";
+        mysqli_close($conn);
+        header("Location: ./../../index.php");
+        exit();
     }
     else {
         echo "Error: ".$sql."<br>" . mysqli_error($conn);
