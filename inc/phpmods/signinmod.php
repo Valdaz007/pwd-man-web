@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "./dbconnect.php";
 
 $conn = dbconxn();
@@ -16,6 +16,7 @@ if (mysqli_num_rows($result) == 1) {
     header("Location: ./../../dashboard.php");
 }
 else {
+    //? Incorrect Username or Password
+    $_SESSION['login_status'] = "Incorrect Username or Password!";
     header("Location: ./../../index.php");
 }
-

@@ -1,13 +1,13 @@
-CREATE TABLE `pwd_man_db`.`tbl_user` (
-    `user_id` INT(8) NOT NULL AUTO_INCREMENT , 
-    `user_email` VARCHAR(50) NOT NULL , 
-    `user_fname` VARCHAR(25) NULL , 
-    `user_lname` VARCHAR(25) NULL , 
-    `user_name` VARCHAR(25) NOT NULL , 
-    `user_pwd` VARCHAR(10) NOT NULL ,  
-    `user_role` VARCHAR(10) NOT NULL , 
+CREATE TABLE `tbl_user` (
+    `user_id` INT(8) NOT NULL AUTO_INCREMENT, 
+    `user_email` VARCHAR(50) NOT NULL UNIQUE, 
+    `user_fname` VARCHAR(25) NULL, 
+    `user_lname` VARCHAR(25) NULL, 
+    `user_name` VARCHAR(25) NOT NULL UNIQUE, 
+    `user_pwd` VARCHAR(10) NOT NULL,  
+    `user_role` VARCHAR(10) NOT NULL DEFAULT 'user', 
     PRIMARY KEY (`user_id`)
-) ENGINE = InnoDB;
+);
 
 
 *** ADD TABLE COLUMN **************************************
@@ -16,7 +16,7 @@ ALTER TABLE `tbl_user`
 ADD `user_role` VARCHAR(10) NOT NULL AFTER `user_pwd`;
 
 
-*** INSERT VALUES **************************************
+*** INSERT USER ADMIN **************************************
 
-INSERT INTO `tbl_user` (`user_id`, `user_email`, `user_fname`, `user_lname`, `user_name`, `user_pwd`) 
-VALUES (NULL, 'volsavaivictor@gmail.com', NULL, NULL, 'admin', 'admin');
+INSERT INTO `tbl_user` (`user_id`, `user_email`, `user_fname`, `user_lname`, `user_name`, `user_pwd`, `user_role`) 
+VALUES (NULL, 'admin@pwdman.com', NULL, NULL, 'admin', 'admin', 'admin');

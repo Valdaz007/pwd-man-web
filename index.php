@@ -19,7 +19,6 @@
     <main>
         <?php 
             if(isset($_SESSION['status'])) {
-
             ?>
             
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -29,6 +28,17 @@
 
             <?php
                 unset($_SESSION['status']);
+            }
+            elseif(isset($_SESSION['login_status'])) {
+            ?>
+            
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>!</strong> <?php echo $_SESSION['login_status']; ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <?php
+                unset($_SESSION['login_status']);
             }
         ?>
         <div class="login-form-wrapper">
