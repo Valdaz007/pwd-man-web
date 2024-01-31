@@ -1,21 +1,28 @@
 *** CREATE TABLE **************************************
 
-CREATE TABLE `pwd_man_db`.`tbl_account` (
+CREATE TABLE `u380947895_ntt_db_0823`.`tbl_accounts` ( 
     `acct_id` INT(8) NOT NULL AUTO_INCREMENT , 
+    `acct_uid` INT(8) NOT NULL , 
     `acct_title` VARCHAR(25) NOT NULL , 
-    `acct_uname` VARCHAR(25) NOT NULL , 
-    `acct_upwd` VARCHAR(25) NOT NULL , 
+    `acct_upwd` VARCHAR(10) NOT NULL , 
+    `acct_uname` VARCHAR(25) NULL , 
+    `acct_pwd_timestamp` DATETIME NOT NULL , 
     `acct_email` VARCHAR(50) NULL , 
-    `acct_pwd_timestamp` DATETIME NOT NULL ,
-    `acct_type` VARCHAR(25) NOT NULL,
+    `acct_type` VARCHAR(25) NOT NULL , 
     PRIMARY KEY (`acct_id`)
 ) ENGINE = InnoDB;
 
 
 *** ADD FOREIGN KEY **************************************
 
-ALTER TABLE `tbl_account` 
-ADD CONSTRAINT `FK_user_id` FOREIGN KEY (`acct_uid`) 
-REFERENCES `tbl_user`(`user_id`) 
-ON DELETE RESTRICT 
-ON UPDATE RESTRICT;
+ALTER TABLE `tbl_accounts` 
+ADD CONSTRAINT `FK_UserID` FOREIGN KEY (`acct_uid`) REFERENCES `tbl_user`(`user_id`) 
+ON DELETE CASCADE 
+ON UPDATE CASCADE;
+
+
+*** ADD FOREIGN KEY **************************************
+
+INSERT INTO `tbl_accounts` 
+(`acct_id`, `acct_uid`, `acct_title`, `acct_upwd`, `acct_uname`, `acct_pwd_timestamp`, `acct_email`, `acct_type`) 
+VALUES ('1', '1', 'Facebook', 'valdaz007', 'admin@pwdman.com', '2024-01-31 07:04:34.000000', 'admin@pwdman.com', 'social media')
