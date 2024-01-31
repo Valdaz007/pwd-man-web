@@ -1,3 +1,8 @@
+<?php
+    include './inc/phpmods/dbconnect.php';
+    $conn = dbconxn();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +28,7 @@
         <div class="pwds mt-3">
             <div class="pwd">
                 <h2>ENTRIES</h2>
+                <a href=""><img src="./inc/img/add.png" alt=""></a>
             </div>
 
             <div class="pwd">
