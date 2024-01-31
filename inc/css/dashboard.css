@@ -28,7 +28,6 @@ header {
 }
 
 .pwds {
-    background-color: rgba(187, 233, 255, 0.429);
 
     width: 95%;
     margin: 0 auto;
@@ -36,22 +35,21 @@ header {
     border-radius: 15px;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: .8rem;
 }
 
 .pwd {
-    background-color: rgba(255, 99, 71, 0.75);
+    border: 3px solid tomato;
 
     padding: 10px;
 
     border-radius: 5px;
 
     .pwd-title {
-        background-color: rgba(43, 208, 226, 0.811);
         border-radius: 3px;
         padding: 2px;
-        color: white;
+        color: tomato;
     }
 
     .pwd-uname-text, .pwd-text {
@@ -75,7 +73,14 @@ header {
 }
 
 .pwds .pwd:nth-child(1) {
+    background-color: tomato;
+    border: none;
     grid-column: 1/-1;
+
+    & h2 {
+        margin: 0;
+        color: white;
+    }
 }
 
 footer {

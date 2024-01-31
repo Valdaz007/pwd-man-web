@@ -22,8 +22,9 @@
 
         <div class="pwds mt-3">
             <div class="pwd">
-                <h2>Passwords</h2>
+                <h2>ENTRIES</h2>
             </div>
+
             <div class="pwd">
                 <h3 class="pwd-title fs-3">Facebook</h3>
                 <p class="pwd-uname-text fs-6">Username</p>
@@ -40,16 +41,6 @@
                 <input class="form-control mb-3" type="text" value="valdaz007">
                 <p class="pwd-text fs-6">Password</p>
                 <input class="form-control mb-3" id="" type="password" value="valdaz007"/>
-                <input class="radio" type="checkbox" onclick="viewPwd()">
-                <p>Show Password</p>
-            </div>
-
-            <div class="pwd">
-                <h3 class="pwd-title fs-3">Instagram</h3>
-                <label class="pwd-uname-text fs-6">Username</label>
-                <input class="form-control mb-3" type="text" value="valdaz007">
-                <p class="pwd-text fs-6">Password</p>
-                <input class="form-control mb-3" type="password" value="ok">
                 <input class="radio" type="checkbox" onclick="viewPwd()">
                 <p>Show Password</p>
             </div>
