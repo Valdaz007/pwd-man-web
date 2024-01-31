@@ -44,25 +44,34 @@
                 <a href=""><img src="./inc/img/add.png" alt=""></a>
             </div>
 
+            <?php
+                //? Get Pwd Entries From DB
+                $sql = "SELECT * FROM `tbl_accounts` WHERE `acct_uid` = '".$_SESSION['uid']."';";
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                    while($row = mysqli_fetch_assoc($result)) {
+            ?>
+
             <div class="pwd">
-                <h3 class="pwd-title fs-3">Facebook</h3>
+                <h3 class="pwd-title fs-3"><?php echo $row['acct_title']; ?></h3>
                 <p class="pwd-uname-text fs-6">Username</p>
-                <input class="form-control mb-3" type="text" value="valdaz007">
+                <input class="form-control mb-3" type="text" value="<?php echo $row['acct_uname']; ?>">
                 <p class="pwd-text fs-6">Password</p>
-                <input class="form-control mb-3" type="password" value="valdaz007">
+                <input class="form-control mb-3" type="password" value="<?php echo $row['acct_upwd']; ?>">
                 <input class="radio" type="checkbox" onclick="viewPwd()">
                 <p>Show Password</p>
             </div>
 
-            <div class="pwd">
-                <h3 class="pwd-title fs-3">LinkedIn</h3>
-                <label class="pwd-uname-text fs-6">Username</label>
-                <input class="form-control mb-3" type="text" value="valdaz007">
-                <p class="pwd-text fs-6">Password</p>
-                <input class="form-control mb-3" id="" type="password" value="valdaz007"/>
-                <input class="radio" type="checkbox" onclick="viewPwd()">
-                <p>Show Password</p>
-            </div>
+            <?php
+                    }
+
+                    mysqli_close($conn);
+                }
+                else {
+                    echo "<h2>No Pwd Entry!";
+                }
+            ?>
         </div>
     </main>
 
