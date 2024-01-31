@@ -16,10 +16,23 @@ header {
     background-color: #323;
     height: 75px;
     color: white;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+    .head-wrapper {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        width: 80%;
+
+
+        & h1, h3 {
+            margin: 0;
+        }
+    }
 }
 
 .categories {
@@ -31,7 +44,6 @@ header {
 
     width: 95%;
     margin: 0 auto;
-    padding: 15px;
     border-radius: 15px;
 
     display: grid;
@@ -115,6 +127,7 @@ footer {
 
     .pwds {
         width: 80%;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

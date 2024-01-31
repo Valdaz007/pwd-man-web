@@ -10,7 +10,11 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_assoc($result);
-    echo $row['user_id']." ".$row['user_name']." ".$row['user_pwd']." ".$row['user_role'];
+    
+    //TODO SAVE USER SESSION
+    $_SESSION['uid'] = $row['user_id'];
+    $_SESSION['una'] = $row['user_name'];
+
     mysqli_close($conn);
 
     header("Location: ./../../dashboard.php");

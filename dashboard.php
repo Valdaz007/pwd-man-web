@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    if (!isset($_SESSION['uid'])) {
+        header("Location: ./index.php");
+        exit();
+    }
+
     include './inc/phpmods/dbconnect.php';
     $conn = dbconxn();
 ?>
@@ -15,7 +21,14 @@
 </head>
 <body>
     <header>
-        <h1>Passwd Dashboard</h1>
+        <div class="head-wrapper">
+            <h1>Passwd Dashboard</h1>
+            <h3>
+                <form action="./inc/phpmods/signoutmod.php">
+                    <input class="btn-sm btn-warning fw-700" type = "submit" value="Sign Out">
+                </form>
+            </h3>
+        </div>
     </header>
 
     <main>
