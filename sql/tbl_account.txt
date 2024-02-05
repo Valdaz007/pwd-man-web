@@ -26,3 +26,8 @@ ON UPDATE CASCADE;
 INSERT INTO `tbl_accounts` 
 (`acct_id`, `acct_uid`, `acct_title`, `acct_upwd`, `acct_uname`, `acct_pwd_timestamp`, `acct_email`, `acct_type`) 
 VALUES ('1', '1', 'Facebook', 'valdaz007', 'admin@pwdman.com', '2024-01-31 07:04:34.000000', 'admin@pwdman.com', 'social media')
+
+
+*** DELETE ROW ******************************************
+
+DELETE FROM `tbl_accounts` WHERE `tbl_accounts`.`acct_id` = 5

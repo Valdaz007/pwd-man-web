@@ -32,6 +32,19 @@
     </header>
 
     <main>
+        <?php
+        if(isset($_SESSION['entry_status'])) {
+        ?>
+            
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>!</strong> <?php echo $_SESSION['entry_status']; ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <?php
+            unset($_SESSION['entry_status']);
+        }
+        ?>
         <div class="categories mt-3">
             <input class="btn-sm btn-warning" type="button" value="Website"/>
             <input class="btn-sm btn-warning" type="button" value="Device"/>
@@ -41,7 +54,7 @@
         <div class="pwds mt-3">
             <div class="pwd">
                 <h2>ENTRIES</h2>
-                <a href=""><img src="./inc/img/add.png" alt=""></a>
+                <a href="./addentry.php"><img src="./inc/img/add.png" alt=""></a>
             </div>
 
             <?php
@@ -78,5 +91,7 @@
     <footer>
         <p>&copyValdazMedia</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
