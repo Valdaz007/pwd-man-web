@@ -32,7 +32,7 @@
                 <input class="form-control mb-2" type = "text" name = "upwd" placeholder="Password" required>
                 <input class="form-control mb-2" type = "text" name = "email" placeholder="Email">
                 <input class="form-control mb-2" type = "text" name = "type" placeholder="Type" required>
-                <input class="btn btn-primary" type = "submit" name = "Sumit">
+                <input class="btn btn-primary" type = "submit" name = "submit">
                 <a class="btn btn-warning" href="./index.php">Cancel</a>
             </form>
         </div>

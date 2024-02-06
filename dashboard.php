@@ -67,7 +67,10 @@
             ?>
 
             <div class="pwd">
-                <h3 class="pwd-title fs-3"><?php echo $row['acct_title']; ?></h3>
+                <div class="title-cont">
+                    <h3 class="pwd-title fs-3"><?php echo $row['acct_title']; ?></h3>
+                    <img src="./inc/img/delete.png" alt="">
+                </div>
                 <p class="pwd-uname-text fs-6">Username</p>
                 <input class="form-control mb-3" type="text" value="<?php echo $row['acct_uname']; ?>">
                 <p class="pwd-text fs-6">Password</p>

@@ -32,4 +32,7 @@ function addentry() {
 
 //TODO DELETE ENTRY
 
-addentry();
+
+if(isset($_POST['submit'])) {
+    addentry();
+}

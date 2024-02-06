@@ -35,6 +35,16 @@ header {
     }
 }
 
+.title-cont {
+    display: flex;
+    justify-content: space-between;
+
+    & img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 .categories {
     width: 95%;
     margin: 0 auto;
