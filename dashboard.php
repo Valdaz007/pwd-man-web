@@ -44,14 +44,27 @@
         <?php
             unset($_SESSION['entry_status']);
         }
+        
+        elseif(isset($_SESSION['delete_status'])) {
         ?>
+            
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>!</strong> <?php echo $_SESSION['delete_status']; ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <?php
+            unset($_SESSION['delete_status']);
+        }
+        ?>
+
         <div class="categories mt-3">
             <input class="btn-sm btn-warning" type="button" value="Website"/>
             <input class="btn-sm btn-warning" type="button" value="Device"/>
             <input class="btn-sm btn-warning" type="button" value="Social Media"/>
         </div>
 
-        <div class="pwds mt-3">
+        <div class="pwds mt-3 mb-5">
             <div class="pwd">
                 <h2>ENTRIES</h2>
                 <a href="./addentry.php"><img src="./inc/img/add.png" alt=""></a>
@@ -67,10 +80,12 @@
             ?>
 
             <div class="pwd">
-                <div class="title-cont">
+                <form class="title-cont" action="./inc/phpmods/entrymod.php" method="POST">
                     <h3 class="pwd-title fs-3"><?php echo $row['acct_title']; ?></h3>
-                    <img src="./inc/img/delete.png" alt="">
-                </div>
+                    <button type="submit" name="delete" value="<?php echo $row['acct_id']; ?>">
+                        <img src="./inc/img/delete.png" alt="delete icon">
+                    </button>
+                </form>
                 <p class="pwd-uname-text fs-6">Username</p>
                 <input class="form-control mb-3" type="text" value="<?php echo $row['acct_uname']; ?>">
                 <p class="pwd-text fs-6">Password</p>

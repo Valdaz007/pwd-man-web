@@ -9,7 +9,7 @@ if (!isset($_SESSION['uid'])) {
 }
 
 //? ADD ENTRY
-function addentry() {
+function addEntry() {
     $conn = dbconxn();
 
     $sql = "
@@ -31,8 +31,22 @@ function addentry() {
 }
 
 //TODO DELETE ENTRY
+function deleteEntry(){
+    $conn = dbconxn();
+    
+    $sql = "DELETE FROM `tbl_accounts` WHERE `acct_id` = ".$_POST['delete'].";";
 
+    if(mysqli_query($conn, $sql)) {
+        $_SESSION['delete_status'] = "Entry Deleted!";
+        mysqli_close($conn);
+        header("Location: ./../../dashboard.php");
+        exit();
+    }
+}
 
 if(isset($_POST['submit'])) {
-    addentry();
+    addEntry();
+}
+elseif(isset($_POST['delete'])) {
+    deleteEntry();
 }
