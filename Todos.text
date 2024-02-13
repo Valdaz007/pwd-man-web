@@ -1,0 +1,11 @@
+* BUG: Entries text and password input are editable.
+    - Must not be editable.
+
+* ADD-ON: Search Bar inplace of entry types.
+    - Search based on 'entry type', 'title' or 'email'.
+
+* ADD-ON: Check internet connection functionality.
+
+* ADD-ON: SESSION Timeout functionality.
+    - Keep sign in until user logout or after 30mins of inactivity.
+
