@@ -30,7 +30,7 @@ function addEntry() {
     mysqli_close($conn);
 }
 
-//TODO DELETE ENTRY
+//? DELETE ENTRY
 function deleteEntry(){
     $conn = dbconxn();
     

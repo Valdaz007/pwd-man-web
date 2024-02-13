@@ -37,7 +37,7 @@
         ?>
             
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>!</strong> <?php echo $_SESSION['entry_status']; ?>
+            <strong>!<?php echo $_SESSION['entry_status']; ?></strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
 
