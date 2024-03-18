@@ -87,9 +87,9 @@
                     </button>
                 </form>
                 <p class="pwd-uname-text fs-6">Username</p>
-                <input class="form-control mb-3" type="text" value="<?php echo $row['acct_uname']; ?>">
+                <input class="form-control mb-3" type="text" value="<?php echo $row['acct_uname']; ?>" readonly>
                 <p class="pwd-text fs-6">Password</p>
-                <input class="form-control mb-3" type="password" value="<?php echo $row['acct_upwd']; ?>">
+                <input class="form-control mb-3" type="password" value="<?php echo $row['acct_upwd']; ?>" readonly>
                 <input class="radio" type="checkbox" onclick="viewPwd()">
                 <p>Show Password</p>
             </div>
