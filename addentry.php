@@ -26,7 +26,7 @@
     <main>
         <div class="login-form-wrapper">
             <form class="form-control" action="./inc/phpmods/entrymod.php" method="POST">
-                <h2 class="mt-2">Sign Up</h2>
+                <h2 class="mt-2">Add Entry</h2>
                 <input class="form-control mb-2" type = "text" name = "title" placeholder="Title" required>
                 <input class="form-control mb-2" type = "text" name = "uname" placeholder="Username">
                 <input class="form-control mb-2" type = "text" name = "upwd" placeholder="Password" required>
