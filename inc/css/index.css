@@ -30,6 +30,11 @@ main {
     padding:20px;
 }
 
+.login-form-wrapper a {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
 footer {
     background-color: #323;
     height: 50px;

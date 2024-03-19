@@ -49,7 +49,7 @@
                 <h2 class="mt-2">Login</h2>
                 <input class="form-control mb-2" type = "text" name = "uname" placeholder="Username" required>
                 <input class="form-control mb-2" type = "password" name = "upwd" placeholder="Password" required>
-                <input class="btn btn-primary" type = "submit" name = "Sumit">
+                <input class="btn-sm btn-primary" type = "submit" name = "Sumit">
                 <a href="./signup.php">I don't have an account</a>
             </form>
         </div>
