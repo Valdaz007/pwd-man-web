@@ -81,7 +81,7 @@
 
             <div class="pwd">
                 <form class="title-cont" action="./inc/phpmods/entrymod.php" method="POST">
-                    <h3 class="pwd-title fs-3"><?php echo $row['acct_title']; ?></h3>
+                    <h3 class="pwd-title fs-4"><?php echo $row['acct_title']; ?></h3>
                     <button type="submit" name="delete" value="<?php echo $row['acct_id']; ?>">
                         <img src="./inc/img/delete.png" alt="delete icon">
                     </button>
