@@ -51,6 +51,7 @@
                 <input class="form-control mb-2" type = "password" name = "upwd" placeholder="Password" required>
                 <input class="btn-sm btn-primary" type = "submit" name = "Sumit">
                 <a href="./signup.php">I don't have an account</a>
+                <a href="./resetpwd.php">Forget Password</a>
             </form>
         </div>
     </main>

@@ -35,6 +35,10 @@ main {
     font-size: 14px;
 }
 
+.rst-mail a {
+    text-decoration: none;
+}
+
 footer {
     background-color: #323;
     height: 50px;
