@@ -14,7 +14,7 @@ function send($email, $code){
         $mail->SMTPAuth = true;
         $mail->Host = 'smtp.titan.email';                   // Host SMTP Server
         $mail->Username = 'support@nxtbetamine.com';                // Sender Email
-        $mail->Password = 'NxtBetaMine@24';                     // Email Pwd
+        $mail->Password = 'password';                     // Email Pwd
         $mail->SMTPSecure = 'ssl';
         $mail->Port = '465';                                    //Port Number
         
