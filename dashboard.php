@@ -58,12 +58,6 @@
         }
         ?>
 
-        <div class="categories mt-3">
-            <input class="btn-sm btn-warning" type="button" value="Website"/>
-            <input class="btn-sm btn-warning" type="button" value="Device"/>
-            <input class="btn-sm btn-warning" type="button" value="Social Media"/>
-        </div>
-
         <div class="pwds mt-3 mb-5">
             <div class="pwd">
                 <h2>ENTRIES</h2>
