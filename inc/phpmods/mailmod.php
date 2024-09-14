@@ -13,12 +13,12 @@ function send($email, $code){
         $mail->isSMTP();                     
         $mail->SMTPAuth = true;
         $mail->Host = 'smtp.titan.email';                   // Host SMTP Server
-        $mail->Username = 'support@nxtbetamine.com';                // Sender Email
+        $mail->Username = 'email';                // Sender Email
         $mail->Password = 'password';                     // Email Pwd
         $mail->SMTPSecure = 'ssl';
         $mail->Port = '465';                                    //Port Number
         
-        $mail->setFrom('support@nxtbetamine.com');          // Sender Email
+        $mail->setFrom('email');          // Sender Email
     
         $mail->addAddress($email);                            // Receiver Email
     
